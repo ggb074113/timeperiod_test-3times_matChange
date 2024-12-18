@@ -3,7 +3,7 @@ MOOSE Version:           git commit d8cce0204e on 2024-10-31
 LibMesh Version:         
 PETSc Version:           3.21.5
 SLEPc Version:           3.21.1
-Current Time:            Tue Dec 17 15:18:34 2024
+Current Time:            Wed Dec 18 14:12:57 2024
 Executable Timestamp:    Mon Dec 16 16:49:41 2024
 
 Checkpoint:
@@ -69,6 +69,12 @@ Controls:
     Parameter(s):
       enable                     bool
       prop_values                std::vector<double, std::allocator<double> >
+  prop1_face
+    Name(s): MaterialBase::prop1_face Materials/prop1_face 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
   prop0_neighbor
     Name(s): MaterialBase::prop0_neighbor Materials/prop0_neighbor 
     Tag(s): Materials 
@@ -77,12 +83,6 @@ Controls:
       prop_values                std::vector<double, std::allocator<double> >
   prop1
     Name(s): MaterialBase::prop1 Materials/prop1 
-    Tag(s): Materials 
-    Parameter(s):
-      enable                     bool
-      prop_values                std::vector<double, std::allocator<double> >
-  prop1_face
-    Name(s): MaterialBase::prop1_face Materials/prop1_face 
     Tag(s): Materials 
     Parameter(s):
       enable                     bool
@@ -99,6 +99,11 @@ Controls:
     Parameter(s):
       enable                     bool
       prop_values                std::vector<double, std::allocator<double> >
+  controls
+    Name(s): Output::controls Outputs/controls 
+    Tag(s): Outputs 
+    Parameter(s):
+      enable                     bool
   prop2_face
     Name(s): MaterialBase::prop2_face Materials/prop2_face 
     Tag(s): Materials 
@@ -111,18 +116,13 @@ Controls:
     Parameter(s):
       enable                     bool
       prop_values                std::vector<double, std::allocator<double> >
-  console
-    Name(s): Output::console 
+  exodus
+    Name(s): Output::exodus 
     Tag(s):  
     Parameter(s):
       enable                     bool
-  controls
-    Name(s): Output::controls Outputs/controls 
-    Tag(s): Outputs 
-    Parameter(s):
-      enable                     bool
-  csv
-    Name(s): Output::csv 
+  console
+    Name(s): Output::console 
     Tag(s):  
     Parameter(s):
       enable                     bool
@@ -157,7 +157,7 @@ Postprocessor Values:
 
 Active Controls:
     MaterialBase::prop0/enable = 1 <bool>
-      MaterialBase::prop0_face/enable = 1 <bool>  
+      MaterialBase::prop0_face/enable = 1 <bool>
       MaterialBase::prop0_neighbor/enable = 1 <bool>
     Materials/prop0/enable = 1 <bool>
     MaterialBase::prop1/enable = 1 <bool>
@@ -249,7 +249,7 @@ Active Controls:
     Materials/prop0/enable = 1 <bool>
     MaterialBase::prop1/enable = 1 <bool>
       MaterialBase::prop1_face/enable = 1 <bool>
-      MaterialBase::prop1_neighbor/enable = 1 <bool>  
+      MaterialBase::prop1_neighbor/enable = 1 <bool>
     Materials/prop1/enable = 1 <bool>
     MaterialBase::prop2/enable = 0 <bool>
       MaterialBase::prop2_face/enable = 0 <bool>
@@ -286,3 +286,4 @@ Active Controls:
       MaterialBase::prop2_face/enable = 1 <bool>
       MaterialBase::prop2_neighbor/enable = 1 <bool>
     Materials/prop2/enable = 1 <bool>
+
