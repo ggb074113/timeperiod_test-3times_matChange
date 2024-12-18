@@ -1,0 +1,288 @@
+Framework Information:
+MOOSE Version:           git commit d8cce0204e on 2024-10-31
+LibMesh Version:         
+PETSc Version:           3.21.5
+SLEPc Version:           3.21.1
+Current Time:            Tue Dec 17 15:18:34 2024
+Executable Timestamp:    Mon Dec 16 16:49:41 2024
+
+Checkpoint:
+  Wall Time Interval:      Every 3600 s
+  User Checkpoint:         Disabled
+  # Checkpoints Kept:      2
+  Execute On:              TIMESTEP_END 
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   121
+  Elems:                   100
+  Num Subdomains:          1
+
+Auxiliary System:
+  Num DOFs:                300
+  Num Local DOFs:          300
+  Variables:               "aux" 
+  Finite Element Types:    "MONOMIAL" 
+  Approximation Orders:    "FIRST" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             ConstantDT
+  TimeIntegrator(s):       ImplicitEuler
+  Solver Mode:             Preconditioned JFNK
+
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+
+| time           | avg            |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+
+
+Controls:
+  MOOSE Problem
+    Name(s): Problem::MOOSE Problem 
+    Tag(s):  
+    Parameter(s):
+      solve                      bool
+  ConstantDT
+    Name(s): TimeStepper::ConstantDT 
+    Parameter(s):
+      enable                     bool
+  prop0
+    Name(s): MaterialBase::prop0 Materials/prop0 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop0_face
+    Name(s): MaterialBase::prop0_face Materials/prop0_face 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop0_neighbor
+    Name(s): MaterialBase::prop0_neighbor Materials/prop0_neighbor 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop1
+    Name(s): MaterialBase::prop1 Materials/prop1 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop1_face
+    Name(s): MaterialBase::prop1_face Materials/prop1_face 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop1_neighbor
+    Name(s): MaterialBase::prop1_neighbor Materials/prop1_neighbor 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop2
+    Name(s): MaterialBase::prop2 Materials/prop2 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop2_face
+    Name(s): MaterialBase::prop2_face Materials/prop2_face 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  prop2_neighbor
+    Name(s): MaterialBase::prop2_neighbor Materials/prop2_neighbor 
+    Tag(s): Materials 
+    Parameter(s):
+      enable                     bool
+      prop_values                std::vector<double, std::allocator<double> >
+  console
+    Name(s): Output::console 
+    Tag(s):  
+    Parameter(s):
+      enable                     bool
+  controls
+    Name(s): Output::controls Outputs/controls 
+    Tag(s): Outputs 
+    Parameter(s):
+      enable                     bool
+  csv
+    Name(s): Output::csv 
+    Tag(s):  
+    Parameter(s):
+      enable                     bool
+  checkpoint
+    Name(s): Output::checkpoint 
+    Tag(s):  
+    Parameter(s):
+      enable                     bool
+  mat
+    Name(s): AuxKernel::mat AuxKernels/mat 
+    Tag(s): AuxKernels 
+    Parameter(s):
+      enable                     bool
+  avg
+    Name(s): Postprocessor::avg Postprocessors/avg 
+    Tag(s): Postprocessors 
+    Parameter(s):
+      enable                     bool
+
+
+Time Step 1, time = 0.1, dt = 0.1
+ Solve Skipped!
+
+Postprocessor Values:
++----------------+----------------+
+| time           | avg            |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.000000e+00 |
++----------------+----------------+
+
+
+Active Controls:
+    MaterialBase::prop0/enable = 1 <bool>
+      MaterialBase::prop0_face/enable = 1 <bool>
+      MaterialBase::prop0_neighbor/enable = 1 <bool>
+    Materials/prop0/enable = 1 <bool>
+    MaterialBase::prop1/enable = 1 <bool>
+      MaterialBase::prop1_face/enable = 1 <bool>
+      MaterialBase::prop1_neighbor/enable = 1 <bool>
+    Materials/prop1/enable = 1 <bool>
+    MaterialBase::prop2/enable = 0 <bool>
+      MaterialBase::prop2_face/enable = 0 <bool>
+      MaterialBase::prop2_neighbor/enable = 0 <bool>
+    Materials/prop2/enable = 0 <bool>
+
+
+Time Step 2, time = 0.2, dt = 0.1
+ Solve Skipped!
+
+Postprocessor Values:
++----------------+----------------+
+| time           | avg            |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.000000e+00 |
+|   2.000000e-01 |   2.000000e+00 |
++----------------+----------------+
+
+
+Active Controls:
+    MaterialBase::prop0/enable = 1 <bool>
+      MaterialBase::prop0_face/enable = 1 <bool>
+      MaterialBase::prop0_neighbor/enable = 1 <bool>
+    Materials/prop0/enable = 1 <bool>
+    MaterialBase::prop1/enable = 1 <bool>
+      MaterialBase::prop1_face/enable = 1 <bool>
+      MaterialBase::prop1_neighbor/enable = 1 <bool>
+    Materials/prop1/enable = 1 <bool>
+    MaterialBase::prop2/enable = 0 <bool>
+      MaterialBase::prop2_face/enable = 0 <bool>
+      MaterialBase::prop2_neighbor/enable = 0 <bool>
+    Materials/prop2/enable = 0 <bool>
+
+
+Time Step 3, time = 0.3, dt = 0.1
+ Solve Skipped!
+
+Postprocessor Values:
++----------------+----------------+
+| time           | avg            |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.000000e+00 |
+|   2.000000e-01 |   2.000000e+00 |
+|   3.000000e-01 |   2.000000e+00 |
++----------------+----------------+
+
+
+Active Controls:
+    MaterialBase::prop0/enable = 1 <bool>
+      MaterialBase::prop0_face/enable = 1 <bool>
+      MaterialBase::prop0_neighbor/enable = 1 <bool>
+    Materials/prop0/enable = 1 <bool>
+    MaterialBase::prop1/enable = 1 <bool>
+      MaterialBase::prop1_face/enable = 1 <bool>
+      MaterialBase::prop1_neighbor/enable = 1 <bool>
+    Materials/prop1/enable = 1 <bool>
+    MaterialBase::prop2/enable = 0 <bool>
+      MaterialBase::prop2_face/enable = 0 <bool>
+      MaterialBase::prop2_neighbor/enable = 0 <bool>
+    Materials/prop2/enable = 0 <bool>
+
+
+Time Step 4, time = 0.4, dt = 0.1
+ Solve Skipped!
+
+Postprocessor Values:
++----------------+----------------+
+| time           | avg            |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.000000e+00 |
+|   2.000000e-01 |   2.000000e+00 |
+|   3.000000e-01 |   2.000000e+00 |
+|   4.000000e-01 |   2.000000e+00 |
++----------------+----------------+
+
+
+Active Controls:
+    MaterialBase::prop0/enable = 1 <bool>
+      MaterialBase::prop0_face/enable = 1 <bool>
+      MaterialBase::prop0_neighbor/enable = 1 <bool>
+    Materials/prop0/enable = 1 <bool>
+    MaterialBase::prop1/enable = 1 <bool>
+      MaterialBase::prop1_face/enable = 1 <bool>
+      MaterialBase::prop1_neighbor/enable = 1 <bool>  
+    Materials/prop1/enable = 1 <bool>
+    MaterialBase::prop2/enable = 0 <bool>
+      MaterialBase::prop2_face/enable = 0 <bool>
+      MaterialBase::prop2_neighbor/enable = 0 <bool>
+    Materials/prop2/enable = 0 <bool>
+
+
+Time Step 5, time = 0.5, dt = 0.1
+ Solve Skipped!
+
+Postprocessor Values:
++----------------+----------------+
+| time           | avg            |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.000000e+00 |
+|   2.000000e-01 |   2.000000e+00 |
+|   3.000000e-01 |   2.000000e+00 |
+|   4.000000e-01 |   2.000000e+00 |
+|   5.000000e-01 |   2.000000e+00 |
++----------------+----------------+
+
+
+Active Controls:
+    MaterialBase::prop0/enable = 0 <bool>
+      MaterialBase::prop0_face/enable = 0 <bool>
+      MaterialBase::prop0_neighbor/enable = 0 <bool>
+    Materials/prop0/enable = 0 <bool>
+    MaterialBase::prop1/enable = 0 <bool>
+      MaterialBase::prop1_face/enable = 0 <bool>
+      MaterialBase::prop1_neighbor/enable = 0 <bool>
+    Materials/prop1/enable = 0 <bool>
+    MaterialBase::prop2/enable = 1 <bool>
+      MaterialBase::prop2_face/enable = 1 <bool>
+      MaterialBase::prop2_neighbor/enable = 1 <bool>
+    Materials/prop2/enable = 1 <bool>
