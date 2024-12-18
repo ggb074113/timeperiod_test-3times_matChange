@@ -49,7 +49,7 @@
   exodus = true
   [./controls]
     type = ControlOutput
-    show_active_objects = false
+    show_active_objects = false  
   [../]
 []
 
@@ -57,7 +57,7 @@
   type = ElementAverageValue  
   variable = aux
 []
-
+# Using three different material properties at three different time periods  
 [Controls]
  [control_0]
   type = TimePeriod
