@@ -157,7 +157,7 @@ Postprocessor Values:
 
 Active Controls:
     MaterialBase::prop0/enable = 1 <bool>
-      MaterialBase::prop0_face/enable = 1 <bool>
+      MaterialBase::prop0_face/enable = 1 <bool>  
       MaterialBase::prop0_neighbor/enable = 1 <bool>
     Materials/prop0/enable = 1 <bool>
     MaterialBase::prop1/enable = 1 <bool>
